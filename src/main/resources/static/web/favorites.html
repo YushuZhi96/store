@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--edge浏览器H5兼容设置-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--360浏览器H5兼容设置-->
+    <meta name="renderer" content="webkit"/>
+    <title>电脑商城</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--导入核心文件-->
+    <script src="../bootstrap3/js/holder.js"></script>
+    <link href="../bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="../bootstrap3/jquery-1.8.3.min.js"></script>
+    <script src="../bootstrap3/js/bootstrap.js"></script>
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/top.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/favorites.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/imgmove.css"/>
+    <script src="../js/favorites.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/imgmove.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+<!--头部-->
+<header class="header">
+    <!--电脑商城logo-->
+    <div class="row">
+        <div class="col-md-3">
+            <a href="index.html">
+                <img src="../images/index/stumalllogo.png"/>
+            </a>
+        </div>
+        <!--快捷选项-->
+        <div class="col-md-9 top-item">
+            <ul class="list-inline pull-right">
+                <li><a href="favorites.html"><span class="fa fa-heart"></span>&nbsp;收藏</a></li>
+                <li class="li-split">|</li>
+                <li><a href="orders.html"><span class="fa fa-file-text"></span>&nbsp;订单</a></li>
+                <li class="li-split">|</li>
+                <li><a href="cart.html"><span class="fa fa-cart-plus"></span>&nbsp;购物车</a></li>
+                <li class="li-split">|</li>
+                <li>
+                    <!--下列列表按钮 ：管理-->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                            <span id="top-dropdown-btn"><span class="fa fa-gears"></span>&nbsp;管理 <span
+                                    class="caret"></span></span>
+                        </button>
+                        <ul class="dropdown-menu top-dropdown-ul" role="menu">
+                            <li><a href="password.html">修改密码</a></li>
+                            <li><a href="userdata.html">个人资料</a></li>
+                            <li><a href="upload.html">上传头像</a></li>
+                            <li><a href="address.html">收货管理 </a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="li-split">|</li>
+                <li><a href="login.html"><span class="fa fa-user"></span>&nbsp;登录</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!--导航 -->
+<!--分割导航和顶部-->
+<div class="row top-nav">
+    <div class="col-md-6">
+        <ul class="nav nav-pills">
+            <li>
+                <a href="#"></a>
+            </li>
+            <li class="active"><a href="index.html"><span class="fa fa-home"></span></a></li>
+            <li><a href="#">秒杀</a></li>
+            <li><a href="#">优惠券</a></li>
+            <li><a href="#">电脑VIP</a></li>
+            <li><a href="#">外卖</a></li>
+            <li><a href="#">超市</a></li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <form action="search.html" class="form-inline pull-right" role="form">
+            <div class="form-group">
+                <input type="text" class="form-control" id="search" name="search" placeholder="请输入商品名称进行搜索">
+            </div>
+            <button type="submit" class="btn btn-default btn-sm"><span class="fa fa-search"></span></button>
+        </form>
+    </div>
+</div>
+<!--头部结束-->
+<!--导航结束-->
+<div class="container">
+    <div class="col-md-offset-1 col-md-10"><b>我的收藏：</b></div>
+    <div class="col-md-offset-1 col-md-10">
+        <div class="col-md-3">
+            <div class="goods-panel">
+                <div class="move-img img-search"/>
+                <img src="../images/portal/14LenovoYOGA710 _gold/collect.png" class="img-responsive"/>
+            </div>
+            <p>¥3398.00</p>
+            <p class="text-row-3"><a href="product.html"><small>联想（Lenovo）YOGA710 14英寸触控笔记本（i7-7500U 8G 256GSSD
+                2G独显 全高清IPS 360°翻转 正版office）金</small></a></p>
+            <span>
+						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span
+                                class="fa fa-heart"></span>取消收藏</a>
+					<a href="cart.html" class="btn btn-default btn-xs add-cart"><span
+                            class="fa fa-cart-arrow-down"></span>加入购物车</a>
+					</span>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="goods-panel">
+            <div class="move-img img-search"/>
+            <img src="../images/portal/17Lenovo)xiaoxinAir13Pro_gold/collect.png" class="img-responsive"/>
+        </div>
+        <p>¥6320.00</p>
+        <p class="text-row-3"><a href="product.html"><small>联想(Lenovo)小新Air13 Pro
+            13.3英寸14.8mm超轻薄笔记本电脑</small></a></p>
+        <span>
+						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span
+                                class="fa fa-heart"></span>取消收藏</a>
+				<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
+				</span>
+    </div>
+</div>
+<div class="col-md-3">
+    <div class="goods-panel">
+        <div class="move-img img-search"/>
+        <img src="../images/portal/20DellXPS15-9550/collect.png" class="img-responsive"/>
+    </div>
+    <p>¥4688.00</p>
+    <p class="text-row-3"><a href="product.html"><small>戴尔(DELL) XPS15升级版 </small></a></p>
+    <span>
+						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span
+                                class="fa fa-heart"></span>取消收藏</a>
+			<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
+			</span>
+</div>
+</div>
+<div class="col-md-3">
+    <div class="goods-panel">
+        <div class="move-img img-search"/>
+        <img src="../images/portal/12(DELL)XPS13gold/collect.png" class="img-responsive"/>
+    </div>
+    <p>¥4600.00</p>
+    <p class="text-row-3"><a href="product.html"><small>戴尔(DELL)XPS13-9360-R1609 13.3</small></a></p>
+    <span>
+						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span
+                                class="fa fa-heart"></span>取消收藏</a>
+			<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
+			</span>
+</div>
+</div>
+</div>
+<div class="col-md-offset-1 col-md-10">
+    <div class="col-md-3">
+        <div class="goods-panel">
+            <div class="move-img img-search"/>
+            <img src="../images/portal/14LenovoYOGA710 _gold/collect.png" class="img-responsive"/>
+        </div>
+        <p>¥3398.00</p>
+        <p class="text-row-3"><a href="product.html"><small>联想（Lenovo）YOGA710 14英寸触控笔记本（i7-7500U 8G 256GSSD
+            2G独显 全高清IPS 360°翻转 正版office）金</small></a></p>
+        <span>
+						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span
+                                class="fa fa-heart"></span>取消收藏</a>
+				<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
+				</span>
+    </div>
+</div>
+<div class="col-md-3">
+    <div class="goods-panel">
+        <div class="move-img img-search"/>
+        <img src="../images/portal/17Lenovo)xiaoxinAir13Pro_gold/collect.png" class="img-responsive"/>
+    </div>
+    <p>¥6320.00</p>
+    <p class="text-row-3"><a href="product.html"><small>联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑</small></a>
+    </p>
+    <span>
+						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span
+                                class="fa fa-heart"></span>取消收藏</a>
+			<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
+			</span>
+</div>
+</div>
+<div class="col-md-3">
+    <div class="goods-panel">
+        <div class="move-img img-search"/>
+        <img src="../images/portal/20DellXPS15-9550/collect.png" class="img-responsive"/>
+    </div>
+    <p>¥4688.00</p>
+    <p class="text-row-3"><a href="product.html"><small>戴尔(DELL) XPS15升级版 </small></a></p>
+    <span>
+						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span
+                                class="fa fa-heart"></span>取消收藏</a>
+			<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
+			</span>
+</div>
+</div>
+<div class="col-md-3">
+    <div class="goods-panel">
+        <div class="move-img img-search"/>
+        <img src="../images/portal/12(DELL)XPS13gold/collect.png" class="img-responsive"/>
+    </div>
+    <p>¥4600.00</p>
+    <p class="text-row-3"><a href="product.html"><small>戴尔(DELL)XPS13-9360-R1609 13.3</small></a></p>
+    <span>
+						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span
+                                class="fa fa-heart"></span>取消收藏</a>
+			<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
+			</span>
+</div>
+</div>
+</div>
+<div class="col-md-offset-1 col-md-10">
+    <div class="col-md-3">
+        <div class="goods-panel">
+            <div class="move-img img-search"/>
+            <img src="../images/portal/14LenovoYOGA710 _gold/collect.png" class="img-responsive"/>
+        </div>
+        <p>¥3398.00</p>
+        <p class="text-row-3"><a href="product.html"><small>联想（Lenovo）YOGA710 14英寸触控笔记本（i7-7500U 8G 256GSSD
+            2G独显 全高清IPS 360°翻转 正版office）金</small></a></p>
+        <span>
+						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span
+                                class="fa fa-heart"></span>取消收藏</a>
+				<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
+				</span>
+    </div>
+</div>
+<div class="col-md-3">
+    <div class="goods-panel">
+        <div class="move-img img-search"/>
+        <img src="../images/portal/17Lenovo)xiaoxinAir13Pro_gold/collect.png" class="img-responsive"/>
+    </div>
+    <p>¥6320.00</p>
+    <p class="text-row-3"><a href="product.html"><small>联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑</small></a>
+    </p>
+    <span>
+						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span
+                                class="fa fa-heart"></span>取消收藏</a>
+			<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
+			</span>
+</div>
+</div>
+<div class="col-md-3">
+    <div class="goods-panel">
+        <div class="move-img img-search"/>
+        <img src="../images/portal/20DellXPS15-9550/collect.png" class="img-responsive"/>
+    </div>
+    <p>¥4688.00</p>
+    <p class="text-row-3"><a href="product.html"><small>戴尔(DELL) XPS15升级版 </small></a></p>
+    <span>
+						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span
+                                class="fa fa-heart"></span>取消收藏</a>
+			<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
+			</span>
+</div>
+</div>
+<div class="col-md-3">
+    <div class="goods-panel">
+        <div class="move-img img-search"/>
+        <img src="../images/portal/12(DELL)XPS13gold/collect.png" class="img-responsive"/>
+    </div>
+    <p>¥4600.00</p>
+    <p class="text-row-3"><a href="product.html"><small>戴尔(DELL)XPS13-9360-R1609 13.3</small></a></p>
+    <span>
+						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span
+                                class="fa fa-heart"></span>取消收藏</a>
+			<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
+			</span>
+</div>
+</div>
+</div>
+<div class="col-md-offset-1 col-md-10">
+    <p align="center">
+        <a href="#">上一页</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">下一页</a>
+    </p>
+</div>
+</div>
+<!--页脚开始-->
+<div class="clearfix"></div>
+<footer class="footer">
+    <!-- 品质保障，私人定制等-->
+    <div class="text-center rights container">
+        <div class="col-md-offset-2 col-md-2">
+            <span class="fa fa-thumbs-o-up"></span>
+            <p>品质保障</p>
+        </div>
+        <div class="col-md-2">
+            <span class="fa fa-address-card-o"></span>
+
+            <p>私人订制</p>
+        </div>
+        <div class="col-md-2">
+            <span class="fa fa-graduation-cap"></span>
+            <p>学生特供</p>
+        </div>
+        <div class="col-md-2">
+            <span class="fa fa-bitcoin"></span>
+
+            <p>专属特权</p>
+        </div>
+    </div>
+    <!--联系我们、下载客户端等-->
+    <div class="container beforeBottom">
+        <div class="col-md-offset-1 col-md-3">
+            <div><img src="../images/index/stumalllogo.png" alt="" class="footLogo"/></div>
+            <div><img src="../images/index/footerFont.png" alt=""/></div>
+        </div>
+        <div class="col-md-4 callus text-center">
+            <div class="col-md-4">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p>买家帮助</p>
+                        </a>
+                    </li>
+                    <li><a href="#">新手指南</a></li>
+                    <li><a href="#">服务保障</a></li>
+                    <li><a href="#">常见问题</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p>商家帮助</p>
+                        </a>
+                    </li>
+                    <li><a href="#">商家入驻</a></li>
+                    <li><a href="#">商家后台</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p>关于我们</p>
+                        </a>
+                    </li>
+                    <li><a href="#">关于圆心</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li>
+                        <span class="fa fa-wechat"></span>
+                        <span class="fa fa-weibo"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="col-md-5">
+                <p>电脑商城客户端</p>
+                <img src="../images/index/ios.png" class="lf">
+                <img src="../images/index/android.png" alt="" class="lf"/>
+            </div>
+            <div class="col-md-6">
+                <img src="../images/index/erweima.png">
+            </div>
+        </div>
+    </div>
+    <!-- 页面底部-备案号 #footer -->
+    <div class="col-md-12 text-center bottom">
+        Copyright © 2022 dnsc.cn All Rights Reserved 京ICP备08963888号-45 <a target="_blank" href="http://www.dnsc.cn/">圆心科技集团有限公司</a>
+        版权所有
+    </div>
+</footer>
+<!--页脚结束-->
+<script>
+    $("#btn-add-to-collect").click(function () {
+        $.ajax({
+            url: "http://localhost:8080/favorites/",
+            type: "post",
+            data: {pid: pid},
+            dataType: "JSON",
+            success: function (res) {
+                alert("收藏成功！")
+            },
+            error: function (err) {
+                alert("服务器出现错误，加入购物车失败")
+            }
+
+        })
+    });
+</script>
+<script type="text/javascript">
+
+    //为了查询设置的全局参数
+    var pageNum = 0;
+    var pageSize = 0;
+    var prePage = 0;
+    var nextPage = 0;
+    var navigatepageNums = [];
+
+    //根据分页条的选择的页数进行查询
+    function PaginationListSelect(num, size) {
+        showCollectProduct(num, size)
+    }
+
+    //取消收藏
+    function stopCollect(fid) {
+        if (confirm("确定要取消对该商品的收藏吗？")) {
+            //取消商品收藏的方法
+            cancelCollect(fid);
+            //刷新页面
+            location.reload();
+        }
+    }
+
+    //加入购物车功能
+    function addCollectToCart(pid, price) {
+        if (confirm("确定要将此商品加入购物车吗？")) {
+            $.ajax({
+                url: "/cart/addCart",
+                type: "post",
+                data: {pid: pid, price: price, num: 1},
+                dataType: "json",
+                success: function (res) {
+                    alert("已成功加入购物车，在购物车等您结算哟！")
+                },
+                error: function (err) {
+                    alert("服务器出现错误，加入购物车失败！")
+                }
+            })
+        }
+    }
+
+    //将分页查询数据填充至页面
+    function addDataIntoList(res) {
+        //在填充数据之前必须先将这两个div标签内的所有元素情况，不然会出现叠加情况
+        $("#collectList").empty();
+        $("#PaginationList").empty();
+        let collectListStr = ""
+        //获取分页信息中商品的数量
+        let dataLength = res.data.list.length
+        //填充商品信息至页面
+        for (let i = 0; i < dataLength; i++) {
+            let favorite = res.data.list[i]
+            collectListStr = "<div class=\"col-md-3\">"
+                + "<div class=\"goods-panel\">"
+                + "<img src=.." + favorite.image + "collect.png" + "  class=\"img-responsive\" />"
+                + "<p>￥" + favorite.price + ".00" + "</p>"
+                + "<div class=\"text-row-3\">"
+                + "<a href=product.html?pid=" + favorite.pid
+                + "><small>"
+                + favorite.title
+                + "</small></a></div>"
+                + "<span style='padding-right: 10px'>"
+                + "<a href='javascript:void(0)' onclick='stopCollect(#{fid})'  class='btn btn-default btn-xs add-fav'><span class='fa fa-heart'></span>取消收藏</a>"
+                + "</span>"
+                + "<span style='padding-right: 10px'>"
+                + "<a href='javascript:void(0)' onclick='addCollectToCart(#{pid},#{price})' class=\"btn btn-default btn-xs add-cart\"><span class=\"fa fa-cart-arrow-down\"></span>加入购物车</a>"
+                + "</span></div></div>"
+
+            collectListStr = collectListStr.replaceAll("#{fid}", favorite.fid)
+            collectListStr = collectListStr.replaceAll("#{pid}", favorite.pid)
+            collectListStr = collectListStr.replaceAll("#{price}", favorite.price)
+            $("#collectList").append(collectListStr)
+            //激活鼠标进入图片有变化的功能
+            classFunction();
+
+        }
+        //重新填充分页条
+        // 将数据返回的部分需要数据进行填充至全局参数
+        pageNum = res.data.pageNum //当前页
+        pageSize = res.data.pageSize  //每页显示数
+        prePage = res.data.prePage //上一页
+        nextPage = res.data.nextPage //下一页
+        navigatepageNums = res.data.navigatepageNums //分页栏的数字
+
+        let firstPage = "<a id='first' href='#' onclick='PaginationListSelect(prePage,pageSize)' style='padding-right: 8px'>上一页</a>"
+        let lastPage = "<a id='end' href='javascript:void(0)' onclick='PaginationListSelect(nextPage,pageSize)' style='padding-right: 8px'>下一页</a>"
+        let PaginationListStr = "";
+        //判断是否是第一页
+        if (res.data.isFirstPage) { //为true表示当前是第一页
+            firstPage = "<a id='first' href='javascript:void(0)' "
+                + "style='opacity: 0.2;padding-right: 8px;color: black'>上一页</a>"
+            PaginationListStr += firstPage;
+        } else { //为false表示当前不是第一页
+            PaginationListStr += firstPage;
+        }
+        //填充分页的页码数
+        for (let i = 0; i < navigatepageNums.length; i++) {
+
+            //当前页的页码
+            let nowNum = navigatepageNums[i]
+            if (nowNum === pageNum) { //相等表示i的次数和当前也相同，对页数显示做变化
+                PaginationListStr += "<a href='javascript:void(0)' " +
+                    "style='padding-right: 8px;color: black' disabled='disabled'>" + "【" + nowNum + "】" + "</a>"
+            } else {
+                PaginationListStr += "<a href='javascript:void(0)' onclick='PaginationListSelect(#{nowNum},pageSize)' " +
+                    "style='padding-right: 8px'>" + nowNum + "</a>"
+            }
+            PaginationListStr = PaginationListStr.replaceAll("#{nowNum}", nowNum)
+
+        }
+        //判断是否是末页
+        if (!res.data.isLastPage) { //取反为false表示当前是末页
+            PaginationListStr += lastPage;
+        } else { //为true表示当前是末页
+            lastPage = "<a id='end' href='javascript:void(0)' style='opacity: 0.2;padding-right: 8px;color: black'>下一页</a>"
+            PaginationListStr += lastPage;
+        }
+        //将拼接的str串插入指定id处
+        $("#PaginationList").append(PaginationListStr)
+    }
+
+    //发送分页查询数据的请求
+    function showCollectProduct(num, size) {
+        let status = 1;
+        $.ajax({
+            url: "/favorites/queryFavorites",
+            type: "get",
+            data: "status=" + status + "&pageNum=" + num + "&pageSize=" + size,
+            dataType: "json",
+            success: function (res) {
+                if (res.data.list.length !== 0) { //代表有数据
+                    //从showPageDataIntoHtml.js中导入的方法
+                    addDataIntoList(res)
+                } else { //代表没数据
+                    $("#resultText").empty().html("暂无收藏商品，先去逛逛吧！")
+                }
+
+            },
+            error: function (err) {
+                alert("服务器出现错误，查询收藏商品失败！")
+            }
+        })
+    }
+
+    $(function () {
+
+        //引入公共头部、中间导航条以及页脚
+        $(".header").load("components/head.html")
+        $(".footer").load("components/footer.html")
+        $(".middleNavigation").load("components/middleNavigationBar.html")
+
+        //网页加载完成自动发送ajax请求查询第一页的收藏商品列表
+        showCollectProduct(1, 4);
+
+    })
+</script>
+</body>
+
+</html>

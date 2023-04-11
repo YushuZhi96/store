@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zys.store.mapper.UserMapper">
+    <!--  将表的字段和类的属性名不一致的进行匹配指定，名称一致的也可以指定。  -->
+    <resultMap id="UserEntityMapper" type="com.zys.store.entity.User">
+        <id column="uid" property="uid"></id>
+        <id column="is_delete" property="isDelete"></id>
+        <result column="created_user" property="createdUser"></result>
+        <result column="created_time" property="createdTime"></result>
+        <result column="modified_user" property="modifiedUser"></result>
+        <result column="modified_time" property="modifiedTime"></result>
+    </resultMap>
+    <!-- useGeneratedKeys="true" 表示使用数据库的自增主键生成策略来生成主键值，而不是手动指定主键值。
+       keyProperty="uid" 则指定了主键的值将会被设置到哪个对象属性中。   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="uid">
+        insert into t_user(username, `password`, salt, phone, email, gender, avatar, is_delete,
+                           created_user, created_time, modified_user, modified_time)
+        values (#{username}, #{password}, #{salt}, #{phone}, #{email}, #{gender},
+                #{avatar}, #{isDelete}, #{createdUser}, #{createdTime},
+                #{modifiedUser}, #{modifiedTime})
+    </insert>
+    <update id="updatePasswordByUid">
+        update t_user
+        set `password`=#{password},
+            modified_user=#{modifiedUser},
+            modified_time=#{modifiedTime}
+        where uid = #{uid};
+    </update>
+    <update id="updateInfoByUid">
+        update t_user
+        set
+        <if test="phone!=null">phone = #{phone},</if>
+        <if test="email!=null">email = #{email},</if>
+        <if test="gender!=null">gender = #{gender},</if>
+        modified_user = #{modifiedUser},
+        modified_time = #{modifiedTime}
+        where uid=#{uid};
+    </update>
+    <update id="updateAvatarByUid">
+        update t_user
+        set avatar        = #{avatar},
+            modified_user = #{modifiedUser},
+            modified_time = #{modifiedTime}
+        where uid = #{uid}
+    </update>
+
+    <select id="findByUsername" resultMap="UserEntityMapper" >
+        select *
+        from t_user
+        where username=#{username};
+    </select>
+    <select id="findByUid" resultMap="UserEntityMapper">
+        select *
+        from t_user
+        where uid = #{uid};
+    </select>
+</mapper>

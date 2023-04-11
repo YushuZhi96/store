@@ -1,0 +1,14 @@
+@RequestMapping("addresses")
+@RestController
+public class AddressController extends BaseController{
+    @Autowired
+    private IAddressService addressService;
+
+    @RequestMapping("add_new_address")
+    public JsonResult<Void> addNewAddress(Address address, HttpSession session) {
+        Integer uid = getUidFromSession(session);
+        String username = getUsernameFromSession(session);
+        addressService.addNewAddress(uid,username,address);
+        return new JsonResult<>(OK);
+    }
+}
